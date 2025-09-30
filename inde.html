@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTETANGO</title>
+  </head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+ 
+
+  <style>
+    body {
+ 
+  padding:0;
+  
+  align-items:center;
+
+
+}
+
+ul{
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ul li{
+  list-style:none;
+  margin:0 0px;
+  transition:0.5s;
+}
+
+ul li a{
+  display: block;
+  position:relative;
+  text-decoration:none;
+  padding:15px;
+  top: 50px;
+  left: 130px;
+  font-size:25px;
+  font-family: Roboto-Regular;
+  color:black ;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+
+ul:hover li a{
+  transform:scale(1.0);
+  opacity:0.1;
+  filter:blur(4px);
+}
+
+ul li a:hover{
+  transform:scale(1.2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
+}
+
+ul li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#55565E;
+  transition:0.4s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+ul li a:hover:before{
+  transition:transform 0.4s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+#lof{
+    top: 35px;
+    left: 20px;
+    position: relative;
+}
+#vi{
+    margin-top: 90px;
+   
+background-color: rgb(255, 255, 255);
+
+position: relative;
+margin-right: 0px;
+
+
+}
+.hs{
+ font-size: 45px;
+ 
+  
+left: 20px;
+color: linear-gradient(to right, #3498db, #2c3e50);  ;
+
+font-family: Roboto-Regular;
+height: 480px;
+width: 1150px;
+position: absolute;
+margin-top: 60px;
+margin-left: 100px;
+}
+
+.hover14 figure {
+   
+
+    
+    margin-left: 250px;
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+    
+   box-shadow: 3px black;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 30%;
+	height: 90%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+#nn{
+  margin-top: 300px;
+  height: 90px;
+  font-family: Roboto-Regular;
+
+  background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100%;
+margin: 0px;
+
+}
+#tast{
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+margin-top: 770px;
+font-size: 50px;
+text-decoration: none;
+}
+.how-section1{
+    margin-top:-15%;
+    padding: 5%;
+}
+.how-section1 h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.how-section1 .subheading{
+    color: #3931af;
+    font-size: 20px;
+}
+.how-section1 .row
+{
+    margin-top: 18%;
+}
+.how-img 
+{
+    text-align: center;
+}
+.how-img img{
+    width:70%;
+}
+
+
+
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px 10px;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 3rem;
+  margin: 0px 40px 30px;
+  margin-right: 180px;
+  color: #fff;
+  text-align: center;
+  
+ 
+  transition: 0.3s;
+}
+.social-icon__link:hover {
+  transform: translateY(-20px);
+}
+
+.menu__link {
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 10px 50px 30px 10px;
+  display: inline-block;
+  transition: 0.5s;
+  margin-top: 0px;
+  left: 70px;
+  text-decoration: none;
+  opacity: 1.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 5;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.ord{
+
+}
+
+#yy{
+
+  height:   60px;
+  width: 100%;
+  margin-top: 0px;
+  background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+</style>
+
+  <body>
+    <ul>
+      <img src="logo.jpg" alt height="110px" width="220px
+        " id="lof">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="oder.html" id="ord">ORDER</a></li>
+    </ul>
+    <div id="vi">
+      <video src="sd.mp4" width="100%"
+        height="100%" autoplay> onclick home to play vid
+
+      </video>
+
+    </div>
+    <br>
+    <br>
+    <hr id="yy">  
+  
+    <div id="dd">
+
+      <div class="hs">
+        Were here to help you live life the panda way. Spend more time doing
+        what you love - well take care of tasty meals, fresh groceries and new
+        flavours.
+
+        <h2 id="demo14">
+          <br>
+          <div class="hover14 column">
+
+            <figure><img src="food.jpeg" /></figure>
+
+          </div>
+        </h2>
+      </div>
+
+    </div>
+    <div id="nn">
+      <h1 id="tast">
+        Taste the convenience
+      </h1>
+
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="w-100 shadow"
+            src="food-delivery-boy-driving-scooter-with-box-with-food-wearing-mask.jpg" />
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5 mt-4">
+            <h1 class="display-4">Restaurants in your pocket</h1>
+            <p class="lead">Try us out! Delicious food and speedy groceries are
+              at your fingertips. Go ahead, download foodpanda now.</p>
+            <a href="#" class="btn btn-outline-dark">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-section1">
+        <div class="row">
+          <div class="col-md-6 how-img">
+            <img
+              src="00618965-cbd0-4797-bc06-c5c31ccfbbc5.webp"
+              class="rounded-circle img-fluid" alt />
+          </div>
+          <div class="col-md-6">
+            <h4>Delicious Dining Delivered to Your Doorstep</h4>
+            <h4 class="subheading">Crafting Culinary Masterpieces for Your
+              Gastronomic Pleasure</h4>
+
+            <p class="text-muted">Welcome to the ultimate destination for
+              culinary convenience and satisfaction! At our food delivery
+              website, we bring the world's finest flavors right to your
+              doorstep. Whether you're craving a comforting classic, an exotic
+              adventure, or a guilt-free healthy option, we have it all. With a
+              wide range of restaurants and cuisines to choose from, you can
+              explore and indulge in a diverse array of dishes without leaving
+              the comfort of your home. Experience the ease of ordering online
+              and let us take care of the rest. From piping hot pizzas and
+              sizzling stir-fries to delectable desserts and nourishing salads,
+              our food delivery service ensures that your cravings are met with
+              speed and reliability. Get ready to embark on a culinary journey
+              like no other, all at the click of a button. Join us in savoring
+              the joy of food, delivered.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Savor Every Bite: Unveiling the Culinary Artistry Behind Our
+              Menu</h4>
+            <h4 class="subheading">Crafting Culinary Masterpieces for Your
+              Gastronomic Pleasure</h4>
+            <p class="text-muted">At our food delivery website, we take immense
+              pride in the art of gastronomy. Behind the scenes, a team of
+              passionate chefs and culinary artisans work tirelessly to create a
+              menu that transcends mere sustenance and transforms each meal into
+              an unforgettable experience. We believe that great food is not
+              just about filling your stomach; it's about tantalizing your taste
+              buds and creating memories with every bite.
+
+              Our menu is a carefully curated collection of culinary
+              masterpieces, inspired by the rich tapestry of global flavors. We
+              source the freshest ingredients, and our chefs blend tradition
+              with innovation to bring you dishes that are both comforting and
+              cutting-edge. From the sizzle of a perfectly seared steak to the
+              delicate balance of flavors in a vegetarian curry, each dish tells
+              a story of passion, precision, and perfection..</p>
+          </div>
+          <div class="col-md-6 how-img">
+            <img
+              src="99292bda-160a-4b26-b64d-163f8329fb5d.webp"
+              class="rounded-circle img-fluid" alt />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 how-img">
+            <img
+              src="1c07c1ba-5ba2-4121-9801-1adf369d0efa.webp"
+              class="rounded-circle img-fluid" alt />
+          </div>
+          <div class="col-md-6">
+            <h4>Our Commitment to Your Satisfaction: The Quality of Every Bite.</h4>
+            <h4 class="subheading">Elevating Your Dining Experience, One
+              Ingredient at a Time</h4>
+            <p class="text-muted">As your go-to food delivery service, we are
+              committed to ensuring that every bite you take is not only
+              delicious but also an experience that leaves you satisfied and
+              eager for more. Our dedication to quality and excellence is at the
+              heart of everything we do, from selecting ingredients to the final
+              delivery of your meal.
+
+              We believe in the power of food to bring joy, comfort, and
+              connection to people's lives. That's why our journey begins with
+              the careful selection of fresh, high-quality ingredients. We
+              partner with local producers and suppliers who share our passion
+              for excellence, ensuring that every component of your meal is of
+              the utmost quality.
+
+              Our commitment to your satisfaction extends to the preparation of
+              each dish. Our skilled chefs pour their culinary expertise and
+              creativity into every recipe they craft. From the careful
+              marination of meats to the precise timing of vegetable sautés,
+              every step in the cooking process is a testament to our dedication
+              to culinary perfection</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+ <br></br>
+<be></be>
+<be></be>
+<be></be>  <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Collaborate</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+  
+      </ul>
+      <p>  @TASTETANGO;2023 | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

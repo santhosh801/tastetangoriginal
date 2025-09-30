@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous">
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <style>
+  
+ul{
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ul li{
+  list-style:none;
+  margin:0 0px;
+  transition:0.5s;
+}
+
+ul li a{
+  display: block;
+  position:relative;
+  text-decoration:none;
+  padding:15px;
+  top: 50px;
+  left: 130px;
+  font-size:25px;
+  font-family: Roboto-Regular;
+  color:#01539D ;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+
+ul:hover li a{
+  transform:scale(1.0);
+  opacity:0.1;
+  filter:blur(4px);
+}
+
+ul li a:hover{
+  transform:scale(1.2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
+}
+
+ul li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#55565E;
+  transition:0.4s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+body{
+  background-color: rgb(233,236,238);
+}
+ul li a:hover:before{
+  transition:transform 0.4s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+    #ss{
+
+font-size: 18px;
+font-weight: 300px;
+
+
+text-align: center;height: 200px;
+width: 700px;
+border: 3px solid ;
+margin: 17px 0px 27px 25px ;
+
+padding: 35px 40px 29px 40px;
+position: relative;
+display: block;
+box-sizing: border-box;
+outline: red;  font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+}
+#top{
+  height: 500px;width: 920px;
+  display: block;
+  margin-left: 50px;
+  margin-top: 110px;  font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-sizing: border-box; font-size: 30px; 
+}
+#top h1{
+  margin-right: 290px;
+  font-size: 50px;
+  font-weight: 600;
+  font-weight: 200px; font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+  
+}
+#top h6{
+  margin-right: 120px;
+  font-size: 30px; font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+
+  
+}
+#dd{
+  height: 92px;
+  width: 709px;
+ margin-top: 80px;
+ margin-right: 50px;
+
+
+  padding: 35px 0px 29px 40px;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border: 3px solid ;  font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+ 
+}
+#dd h1{
+  text-align: center;
+ font-size: 30px;
+ margin-left: 60px;
+
+  font-weight: 700;
+  position:absolute;
+   font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+}
+#ff h1{text-align: center;
+  font-size: 30px;
+ margin-left: 120px;
+margin-top: 17px;
+  font-weight: 700;
+  position:absolute;
+   font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+}
+#ff {
+  height: 92px;
+  width: 709px;
+ margin-top: 30px;
+ margin-left: 100px;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+ font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+  border: 3px solid black;
+ 
+}
+#gg{
+  height: 500px;width: 330px;
+  display: block;
+  margin-left: 1010px;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  position: absolute;  font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+  margin-top: 100px;
+  box-sizing: border-box; font-size: 30px; 
+}
+#head{
+  margin-top: 20px;
+  margin-left: 200px;
+  font: 500px;
+  font-size: 60px;
+
+text-align: center;
+  font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;;
+}
+#make{
+
+transition: all 0s ease 0s;
+
+box-sizing: border-box;
+box-shadow: rgba(40, 44, 63, 0.4) 0px 3px 5px 0px;
+font-family: ProximaNova, arial, "Helvetica Neue", sans-serif;
+font-size: 14px;
+margin-left: 40px;
+margin-top: 30px;
+font-weight: 300;
+line-height: 16.8px;
+text-decoration: none solid rgb(40, 44, 63);
+word-spacing: 0px;
+
+background-color:  #282C3F;
+background-position: 0% 0%;
+color:  #282C3F;
+
+height: 39.9943px;
+width: 39.9943px;
+position: absolute;
+top: 33.988px;
+bottom: 128.971px;
+right: 769.008px;
+left: -29.9885px;
+display: block;
+}
+#sk{
+
+font-family: icomoon;
+font-size: 20px;
+line-height: 20px;
+text-decoration: none solid rgb(255, 255, 255);
+word-spacing: 0px
+;
+background-color:  #FFFFFF;
+background-position: 0% 0%;
+color:  #FFFFFF;
+
+height: 19.9971px;
+width: 20.0115px;
+
+position: absolute;
+top: 19.9971px;
+bottom: 0px;
+right: -0.0143349px;
+left: 19.9971px;
+display: block;
+
+transform: matrix(1, 0, 0, 1, -10.0917, -10.0917);
+transition: all 0s ease 0s;
+
+box-sizing: border-border;
+}
+</style>
+  <body>
+   
+      <ul>
+        <img src="logo.jpg" alt height="110px" width="220px
+              " id="lof">
+    
+              <h1 id="head">  SECURE CHECKOUT</h1>
+      </ul>
+  
+
+    
+    <div id="gg"> <img src="picsss.jpg" alt="" > </div>
+    <div id="top">
+     
+    <img src="lii.jpg" alt="">
+   
+    </div>
+   
+
+  </body>
+</html>
+

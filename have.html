@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+    
+.food-mega-breakfast{
+    margin-top: 30px;
+    height: 600px;
+    padding: 20px;
+    color: black;
+
+    width: 100%;
+
+}
+
+
+ul{
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ul li{
+  list-style:none;
+  margin:0 0px;
+  transition:0.5s;
+}
+
+ul li a{
+  display: block;
+  position:relative;
+  text-decoration:none;
+  padding:15px;
+  top: 50px;
+  left: 130px;
+  font-size:25px;
+  font-family: Roboto-Regular;
+  color:#01539D ;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+
+ul:hover li a{
+  transform:scale(1.0);
+  opacity:0.1;
+  filter:blur(4px);
+}
+
+ul li a:hover{
+  transform:scale(1.2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
+}
+
+ul li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#55565E;
+  transition:0.4s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+ul li a:hover:before{
+  transition:transform 0.4s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+#lof{
+    top: 35px;
+    left: 20px;
+    position: relative;
+}
+
+.carousel-inner{
+    width: 50%;
+    height: 50%;
+    margin-top: 70px;
+    margin-left: 170px;
+}
+.carousel-control-prev{
+    background-color: #EEA47F;
+    border: 3px solid #01539D;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-left: 1000px;
+    margin-top: 20px;
+}
+.carousel-control-next{
+    background-color: #EEA47F;
+    border: 3px solid #01539D;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-top:50px;
+    margin-right: 130px;
+}
+#djj{
+    font-size: 50px;
+    font-weight: 300px;
+    margin-left: 30px;
+    margin-top: 7px;
+    color: #EEA47F;
+    height: 90px;
+width: 100%;
+    font-family: 
+Okra, Helvetica, sans-serif;
+}
+
+
+.food-mega-breakfast h2{font-size: 60px;
+color: #EEA47F;
+height: 90px;
+width: 78%;
+margin-top: 20px;
+margin-left: 320px;
+overflow: hidden;
+  position: relative;
+padding: 10px;
+animation-name: sd;
+background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+font-family:
+Okra, Helvetica, sans-serif;
+
+  position: absolute;
+  top: 8.5rem;
+  opacity: 0;
+  animation-name: rightFadeInOut;
+  animation-delay: 1s;
+  animation-duration:10s;
+  
+}
+@keyframes rightFadeInOut {
+  0% {
+    position: absolute;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 10;
+    
+  }
+}
+
+
+.food-mega-breakfast p{
+    font-size: 27px;
+    color: #01539D;    font-family: 
+Okra, Helvetica, sans-serif;
+}
+
+.accordion {
+  margin-top: 190px;
+padding: 30px;
+text-align: center;
+  height: 100px;
+  margin-left: 180px; width: 980px;
+}
+.accordion input {
+  display: none;
+}
+.box {
+  position: relative; 
+  background: #EEA47F;
+    height: 68px;
+    transition: all .15s ease-in-out;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    box-shadow: #EEA47F;
+}
+header.box {
+  background: #00BCD4;
+  z-index: 100;
+  cursor: initial;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+}
+header .box-title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16pt;
+  color: white;
+  cursor: initial;
+}
+.box-title {
+  width: calc(100% - 40px);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 20px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+.box-content {
+  width: calc(100% - 40px);
+  padding: 30px 20px;
+  font-size: 11pt;
+  color: white;
+  display: none;
+}
+.box-close {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}
+input:checked + .box {
+  height: auto;
+  margin: 16px 0;
+    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+input:checked + .box .box-title {
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+  display: inline-block;
+}
+.arrows section .box-title {
+  padding-left: 44px;
+  width: calc(100% - 64px);
+}
+.arrows section .box-title:before {
+  position: absolute;
+  display: block;
+  content: '\203a';
+  font-size: 18pt;
+  left: 20px;
+  top: -2px;
+  transition: transform .15s ease-in-out;
+  color: rgba(0,0,0,.54);
+}
+input:checked + section.box .box-title:before {
+  transform: rotate(90deg);
+}
+#loca{
+height: 30px;width: 100%;
+color: #00BCD4;
+font-size: 65px;
+margin-top: 600px;
+font-weight: 50px;
+justify-content: center;
+text-align: center;
+background-color: #fff;
+}
+#lo{
+  height: 30px;width: 100%;
+color: #000000;
+font-size: 30px;
+padding: 13px;
+margin-top: 110px;
+font-weight: 30px;
+justify-content: center;
+text-align: center;
+background-color: #fff;
+}
+.button-48 {
+  appearance: none;
+  background-color:#01539D;
+  border-width: 0;
+  box-sizing: border-box;
+  color: wheat;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 80px;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #01539D;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: black}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+
+</style>
+<body>
+    
+    <ul>
+        <img src="logo.jpg" alt height="110px" width="220px
+          " id="lof">
+        <li><a href="inde.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="oder.html" id="ord">ORDER</a></li>
+      </ul>
+      <br><br><br><br>
+    <div class="food-mega-breakfast">
+
+        <h2>Food Mega Free Breakfast</h2>
+        <br><br>
+        <p>At Food Mega, we're passionate about delivering a delightful culinary experience that satisfies your taste buds and nourishes your soul. With a rich history spanning over a decade, our mission has always been to provide top-quality food with a touch of creativity and innovation. We take pride in our commitment to sourcing the finest ingredients, preparing dishes with love, and serving our customers with a warm and welcoming smile.
+
+            Our journey began in a small kitchen, where our founder, a culinary enthusiast, started experimenting with flavors and recipes. Today, we've grown into a thriving restaurant dedicated to bringing you an array of delectable dishes, from traditional classics to unique, signature creations. Our team of skilled chefs and friendly staff is here to ensure that every visit to Food Mega is a memorable one.
+            
+            With a focus on quality, flavor, and customer satisfaction, Food Mega has become a beloved name in the culinary world. Whether you're joining us for breakfast, lunch, or dinner, we promise a food mega experience that will keep you coming back for more. Thank you for choosing us as your culinary destination, and we look forward to serving you with passion and dedication."
+            
+            Feel free to adapt this paragraph to suit the specifics of your business or website's "About Us" section.
+          </p>
+<br><br><br>
+            <div id="djj">
+                whats on your mind ? <br>
+                Inspiration for your first order
+                
+
+            </div>
+            
+            <div>
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="have (1).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (2).jpeg"class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (3).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item ">
+                        <img src="have (4).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (5).jpeg"class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (10).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (7).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (8).jpeg"class="d-block w-60" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="have (9).jpeg" class="d-block w-60" alt="...">
+                      </div>
+                    </div>
+                  
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+
+
+                  </div>
+            </div>
+            
+            
+           
+    </div>
+    <div id="loca">
+      Popular locations in
+    
+    India
+    </div>
+
+    <div id="lo">
+      From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.
+    </div>
+    <div></div>
+    <nav class="accordion arrows">
+     
+      <input type="radio" name="accordion" id="cb1" />
+      <section class="box">
+        <label class="box-title" for="cb1">Bengaluru Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+
+        <div class="box-content">Bengaluru, also known as the Silicon Valley of India, is a melting pot of cultures. The city's food scene reflects this diversity. From traditional South Indian fare to global cuisines, Bengaluru has it all. Don't miss out on iconic restaurants like Mavalli Tiffin Room (MTR) for mouthwatering dosas or Windmills Craftworks for a fine dining experience amidst nature.
+ <br><br>
+
+ <a href="bang.html"> <button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button>.</a>
+        </div>
+        <!-- HTML !-->
+
+
+.      </section>
+      <br><br>
+      <input type="radio" name="accordion" id="cb2" />
+      <section class="box">
+        <label class="box-title" for="cb2"> Agra Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">
+          Agra, famous for the enchanting Taj Mahal, is also a treat for food enthusiasts. hile visiting this historical city, savor Mughlai delights at Pinch of Spice or indulge in Agra's renowned petha (a sweet delicacy) at Panchhi Petha <br><br>
+           <a href="agra.html"><button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button></div></a>
+           
+      </section>
+      <br><br>
+      <input type="radio" name="accordion" id="cb3" />
+      <section class="box">
+        <label class="box-title" for="cb3">Chennai Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Chennai's cuisine is a celebration of flavors, with a focus on seafood and South Indian delicacies. Explore Saravana Bhavan for delectable vegetarian dishes or try the famous Chettinad cuisine at Anjappar. For a taste of Chennai's unique filter coffee, head to Sangeeth <br><br>
+             <a href="chennai.html"><button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button></a>.</div>
+      </section>
+  <br><br>
+      <input type="radio" name="accordion" id="acc-close" />
+      <section class="box">
+        <label class="box-title" for="cb3">Kolkata Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Known for its sweet roshogollas and iconic street food, Kolkata's culinary landscape is a gastronomic adventure. Experience the grandeur of traditional Bengali dishes at 6 Ballygunge Place or enjoy the puchka (pani puri) at Vivekananda Park.
+            </div>
+      </section>
+  <br><br>
+      <input type="radio" name="accordion" id="acc-close" />      <section class="box">
+        <label class="box-title" for="cb3">Mumbai Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Mumbai, the city that never sleeps, offers a wide variety of dining options. From vada pav at Ashok Vadapav to the fine dining experience at The Table, Mumbai caters to every taste. Don't forget to try the seafood at Trishna for an authentic coastal experience.
+          <button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button>.</div>
+      </section>
+  <br><br>
+      <input type="radio" name="accordion" id="acc-close" />      <section class="box">
+        <label class="box-title" for="cb3">Pune Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Pune is not just an educational hub but also a hub for delicious food. Visit Vaishali for a South Indian breakfast or enjoy an exquisite North Indian meal at Kayani Bakery. The city's vibrant street food scene is a must-try, with stalls serving misal pav and bhel puri.
+             <button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button>.</div>
+      </section>
+  <br><br>
+      <input type="radio" name="accordion" id="acc-close" />      <section class="box">
+        <label class="box-title" for="cb3">Vellore Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Vellore, a city in Tamil Nadu, offers a unique blend of Tamil and Andhra cuisines. Try the fiery Andhra biryani at Nagarjuna or explore the local flavors at Arya Bhavan. The city's food scene may be less known, but it's worth exploring.
+             <button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button>.</div>
+      </section>
+  <br><br>
+      <input type="radio" name="accordion" id="acc-close" />      <section class="box">
+        <label class="box-title" for="cb3">Salem Restaurants</label>
+        <label class="box-close" for="acc-close"></label>
+        <div class="box-content">Salem, nestled in the heart of Tamil Nadu, is known for its simple yet delicious cuisine. Visit Shree Anandha Bhavan for authentic South Indian meals or try the local street food like kuzhi paniyaram.
+             <button class="button-48" role="button"><span class="text">CLICK TO ORDER</span></button>
+        </div>
+      </section>
+  
+   
+    </nav>
+</body>
+</html>
